@@ -1,0 +1,679 @@
+<!DOCTYPE html><html lang="en">
+
+<head>
+	<!-- Basic informations -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!-- Site informations -->
+	<title>Lucas Laborde</title>
+	<meta name="author" content="">
+	<meta name="description" content="">
+
+	<!-- Open Graph -->
+	<meta property="og:title" content="Free Aurora Template">
+	<meta property="og:description" content=".">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+
+
+
+	<!-- Favicon -->
+	<link rel="icon" href="../PersonalPortfolio-master/style/favicon/vivi1.png" type="image/x-icon">
+	
+	
+
+	<!-- Fonts -->
+	<link href="style/fonts/webfont-raleway/webfont-raleway.css" rel="stylesheet" type="text/css">
+	<link href="style/fonts/webfont-font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+	<!-- Stylesheets -->
+	<link href="style/css/global.css" type="text/css" rel="stylesheet" media="all">
+
+	<!-- Scripts preload -->
+	<!--[if lt IE 9]><script src="style/js/html5shiv.js"></script><![endif]-->
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+		$(document).ready(function() {
+		  $("#contact-form").submit(function(event) {
+			// Stop the form from submitting normally
+			event.preventDefault();
+	  
+			// Get the form data
+			var formData = {
+			  name: $("input#sender_name").val(),
+			  email: $("input#sender_email").val(),
+			  message: $("textarea#message_content").val()
+			};
+	  
+			// Submit the form using Formspree
+			$.ajax({
+			  url: "https://formspree.io/f/xeqwvvne",
+			  method: "POST",
+			  data: formData,
+			  dataType: "json",
+			  success: function() {
+				// Show the success message
+				$(".contact__response--success").show();
+				$(".contact__response--error").hide();
+				$("input#sender_name").val("");
+				$("input#sender_email").val("");
+				$("textarea#message_content").val("");
+			  },
+			  error: function() {
+				// Show the error message
+				$(".contact__response--success").hide();
+				$(".contact__response--error").show();
+			  }
+			});
+		  });
+		});
+	  </script>
+
+</head>
+
+<body>
+
+
+
+
+
+
+	<!-- Some Helper Stuff -->
+	<div id="start" class="start">&nbsp;</div>
+	<div class="maxwidth1050">&nbsp;</div>
+
+
+
+
+
+
+
+	<!-- Header -->
+	<header class="header">
+		<div class="header__wrapper">
+			<div class="header__hamburger">
+				<div class="header__hamburger-block">&nbsp;</div>
+				<div class="header__hamburger-block">&nbsp;</div>
+				<div class="header__hamburger-block">&nbsp;</div>
+			</div>
+			<nav class="header__navigation">
+				<a href="#start" class="js-smooth-scroll">
+					<div class="js-smooth-scroll  header__navigation-element">Start...</div>
+				</a>
+				<a href="#experience" class="js-smooth-scroll">
+					<div class="header__navigation-element  header__navigation-element--experience">Habilidades...</div>
+				</a>
+				<a href="#features" class="js-smooth-scroll">
+					<div class="header__navigation-element  header__navigation-element--features">Complem...</div>
+				</a>
+				<a href="#realizations" class="js-smooth-scroll">
+					<div class="header__navigation-element  header__navigation-element--realizations">Portfolio...</div>
+				</a>
+				<a href="#contact" class="js-smooth-scroll">
+					<div class="header__navigation-element  header__navigation-element--contact">Contact...</div>
+				</a>
+			</nav>
+
+			<a href="#start" class="header__title-wrapper  js-smooth-scroll">
+				<div class="header__title-main">Top</div>
+				<div class="header__title-sub"></div>
+			</a>
+
+			<div class="header__social-icons">
+				
+				<a target="_blank" href="https://github.com/labordetrabajo/"><i class="fa fa-github"></i></a>
+				<a target="_blank" href="https://www.linkedin.com/in/lucas-laborde-26b64b253/"><i class="fa fa-linkedin"></i></a>
+			</div>
+		</div>
+	</header>
+	<!-- End Header -->
+
+
+
+
+
+
+
+
+	<!-- First Fixed "Hero" Section -->
+	<section id="hero" class="hero">
+		<div class="hero__background">&nbsp;</div>
+		<div class="hero__gradient">&nbsp;</div>
+		<div class="hero__pattern">&nbsp;</div>
+		<div class="hero__content">
+			<div class="hero__content-wrapper">
+				<div class="hero__title-wrapper">
+					<div class="hero__title-large">Hola Mundo!</div>
+					<div class="hero__title-small">Soy Lucas Laborde</div>
+				</div>
+				<div class="hero__photo-wrapper">
+					<div class="hero__photo">
+						<!--<div class="hero__hat">&nbsp;</div>-->
+					</div>
+				</div>
+				<div class="hero__description"> 
+					Desde que descubrí el mundo de la programación, he sentido una gran pasión por ella y siempre estoy buscando nuevas 
+					formas de innovar y mejorar mis habilidades como desarrollador full stack. Soy una persona comprometida, organizada y 
+					enfocada en la resolución de problemas de manera eficiente. Me encanta trabajar en equipo y siempre estoy dispuesto a 
+					aprender nuevas tecnologías y enfrentar desafíos en el desarrollo de aplicaciones web y móviles. ¡Gracias por leer mi presentación!
+				</div>
+				<div class="hero__call-to-action">
+					<a href="https://drive.google.com/file/d/15vSozB47JH6GiZZIkdApvSdq5kGzRbUv/view?usp=share_link" target="_blank" class="hero__button  ghost-button  ghost-button--hero">Descargar C.V &nbsp; <i class="fa fa-download"></i></a>
+					<a href="" target="_blank" class="hero__alt-button"></a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End First Fixed "Hero" Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- Scrollable Content -->
+	<div class="content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- "Experience" Section -->
+		<section id="experience" class="experience">
+			<div class="experience__hollow-arrow">&nbsp;</div>
+			<div class="experience__wrapper">
+				<div class="section-header">
+					<div class="section-header__title  section-header__title--experience">Habilidades</div>
+					<div class="section-header__subtitle">Software y Tecnologias en las que poseo experiencia</div>
+				</div>
+				<div class="experience__icons-wrapper">
+					<div class="experience__icon  experience__icon--html5">
+						<div class="experience__icon-description">HTML5</div>
+					</div>
+					<div class="experience__icon  experience__icon--css3">
+						<div class="experience__icon-description">CSS3</div>
+					</div>
+					<div class="experience__icon  experience__icon--javascript">
+						<div class="experience__icon-description">JavaScript</div>
+					</div>
+					<div class="experience__icon  experience__icon--sass">
+						<div class="experience__icon-description">Hardware</div>
+					</div>
+					<div class="experience__icon  experience__icon--jquery">
+						<div class="experience__icon-description">jQuery</div>
+					</div>
+					<div class="experience__icon  experience__icon--git">
+						<div class="experience__icon-description">GIT</div>
+					</div>
+					<div class="experience__icon  experience__icon--wordpress">
+						<div class="experience__icon-description">WordPress</div>
+					</div>
+					<div class="experience__icon  experience__icon--photoshop">
+						<div class="experience__icon-description">Adobe Photoshop</div>
+					</div>
+					<div class="experience__icon  experience__icon--illustrator">
+						<div class="experience__icon-description">Adobe Illustrator</div>
+					</div>
+					<div class="experience__icon  experience__icon--ruby">
+						<div class="experience__icon-description">Ruby</div>
+					</div>
+					<div class="experience__icon  experience__icon--bootstrap">
+						<div class="experience__icon-description">Bootstrap </div>
+					</div>
+					<div class="experience__icon  experience__icon--foundation">
+						<div class="experience__icon-description">Electronica</div>
+					</div>
+					<div class="experience__icon  experience__icon--python ">
+						<div class="experience__icon-description">Python</div>
+					</div>
+					<div class="experience__icon  experience__icon--mysql ">
+						<div class="experience__icon-description">MySQL</div>
+					</div>
+					<div class="experience__icon  experience__icon--alarmascamaras ">
+						<div class="experience__icon-description">Camaras-Alarmas</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End "Experience" Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- "Features" Section -->
+		<section id="features" class="features">
+			<div class="features__wrapper">
+				<div class="section-header">
+					<div class="section-header__title  section-header__title--features">Habilidades Complementarias </div>
+					<div class="section-header__subtitle">Considero que un trabajo bien hecho refleja la calidad de mis conocimientos</div>
+				</div>
+				<div class="features__elements-wrapper">
+					<div class="features__element">
+						<div class="features__image  features__image--mobile">&nbsp;</div>
+						<div class="features__text">
+							<div class="features__title">Diseño Web Responsive </div>
+							<div class="features__description">Me enfoco en crear sitios web que brinden una excelente experiencia de usuario sin importar desde dónde se acceda.</div>
+						</div>
+					</div>
+					<div class="features__element">
+						<div class="features__image  features__image--newest">&nbsp;</div>
+						<div class="features__text">
+							<div class="features__title">Creatividad e innovación</div>
+							<div class="features__description"> Soy un apasionado por la tecnología y siempre estoy buscando nuevas formas de innovar en el desarrollo de aplicaciones web</div>
+						</div>
+					</div>
+					<div class="features__element">
+						<div class="features__image  features__image--intuitive">&nbsp;</div>
+						<div class="features__text">
+							<div class="features__title">Diseño Visual e Intuitivo</div>
+							<div class="features__description">Los usuarios deben poder navegar fácilmente por el sitio web, encontrar lo que buscan y realizar acciones como comprar productos o contactar con el negocio sin esfuerzo</div>
+						</div>
+					</div>
+					<div class="features__element">
+						<div class="features__image  features__image--browsers">&nbsp;</div>
+						<div class="features__text">
+							<div class="features__title">Control de Versiones</div>
+							<div class="features__description">Puedo mantener un historial completo y detallado de los cambios realizados en el código fuente, lo que me permite trabajar en equipo de manera más eficiente y sin errores.</div>
+						</div>
+					</div>
+					<div class="features__element">
+						<div class="features__image  features__image--clients">&nbsp;</div>
+						<div class="features__text">
+							<div class="features__title">Clientes</div>
+							<div class="features__description">Me adapto a todas las peticiones de los clientes y me esfuerzo por ofrecer soluciones que satisfagan sus necesidades </div>
+						</div>
+					</div>
+					<div class="features__element">
+						<div class="features__image  features__image--fast">&nbsp;</div>
+						<div class="features__text">
+							<div class="features__title">APIs</div>
+							<div class="features__description">Integración de APIs en sistemas existentes, lo que me permite garantizar una integración perfecta con otras aplicaciones y servicios</div>
+						</div>
+					</div>
+					<div class="features__element">
+						<div class="features__image  features__image--seo">&nbsp;</div>
+						<div class="features__text">
+							<div class="features__title">SCRUM</div>
+							<div class="features__description">Coordinacion con equipos de desarrollo de manera efectiva, permitiendo que los proyectos se entreguen a tiempo y dentro del presupuesto.</div>
+						</div>
+					</div>
+					<div class="features__element">
+						<div class="features__image  features__image--secure">&nbsp;</div>
+						<div class="features__text">
+							<div class="features__title">Trabajo en Equipo</div>
+							<div class="features__description">Soy capaz de colaborar con colegas de diferentes áreas y niveles, y siempre estoy dispuesto a aportar ideas y soluciones que mejoren el trabajo del equipo. </div>
+						</div>
+					</div>
+					<div class="features__element">
+						<div class="features__image  features__image--semantic">&nbsp;</div>
+						<div class="features__text">
+							<div class="features__title">Quality Assurence</div>
+							<div class="features__description"> Habilidades especializadas en pruebas de software, análisis de datos y resolución de problemas. Tengo experiencia en el desarrollo e implementación de planes de prueba, la identificación y documentación de errores</div>
+						</div>
+					</div>
+					<div class="features__element">
+						<div class="features__image  features__image--sourcefiles">&nbsp;</div>
+						<div class="features__text">
+							<div class="features__title">Frameworks</div>
+							<div class="features__description">Experiencia en el uso de frameworks y herramientas populares tanto en el front-end como en el back-end</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End "Features" Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- "Realizations" Section - With Projects -->
+		<section id="realizations" class="realizations">
+			<div class="realizations__wrapper">
+
+				<div class="section-header">
+					<div class="section-header__title  section-header__title--realizations">Portfolio...</div>
+					<div class="section-header__subtitle">Diferentes proyectos en los que trabaje</div>
+				</div>
+
+				<div class="showcase">
+					<div class="showcase__thumbnails-wrapper">
+
+						<!-- normal -->
+						<img data-project="p1" class="showcase__thumb  showcase__thumb--first  showcase__thumb--active" src="content/project01_thumb.jpg">
+						<img data-project="p2" class="showcase__thumb" src="content/project_placeholder_thumb.jpg">
+						<img data-project="p3" class="showcase__thumb" src="content/project_placeholder_thumb.jpg">
+						
+						<!-- blank template
+						<div data-project="p5" class="showcase__thumb  showcase__thumb--blank">&nbsp;</div>
+						 -->
+
+					</div>
+
+
+
+					<div class="showcase__stage-wrapper">
+
+						<!-- project 1 -->
+						<div data-project="p1" class="showcase__stage  showcase__stage--active">
+							<div class="showcase__slider">
+								<ul class="rslides">
+
+									<li>
+										<a href="content/project01_slide01.jpg" target="_blank">
+											<img src="content/project01_slide01.jpg">
+										</a>
+									</li>
+
+									<li>
+										<a href="content/project01_slide02.jpg" target="_blank">
+											<img src="content/project01_slide02.jpg">
+										</a>
+									</li>
+
+								</ul>
+							</div>
+							<div class="showcase__infos-wrapper">
+								<div class="showcase__title">
+									Games Servicios Tecnicos
+									<div class="showcase__title-description">Personal Project</div>
+								</div>
+
+								<div class="showcase__point">
+									<div class="showcase__point-title">Responsabilidades</div>
+									<div class="showcase__point-description">
+										UX Design, Front-end and Back-End Development.
+									</div>
+								</div>
+								<div class="showcase__point">
+									<div class="showcase__point-title">Lenguajes/Frameworks</div>
+									<div class="showcase__point-description">
+										  HTML5, CSS3, JavaScript,Bootstrap 
+									</div>
+								</div>
+
+
+								<div class="showcase__point">
+									<div class="showcase__point-title">Detalles</div>
+									<div class="showcase__point-details-excerpt">
+										Pagina que diseñe y programe  para mi actual emprendimiento <span class="showcase__readmore">Mas</span>
+									</div>
+
+									<div class="showcase__point-details-full">
+										En esta pagina muestro todos los servicios que ofrecemos y con las tecnologias que trabajamos <span class="showcase__readless">Menos</span>
+									</div>
+								</div>
+
+
+								<a target="_blank" href="https://labordetrabajo.github.io/GamesServiciosTecnicos/" class="showcase__button  ghost-button  ghost-button--realizations">Ver Pagina</a>
+							</div>
+						</div>
+
+						<!-- project 2 -->
+						<div data-project="p2" class="showcase__stage">
+							<div class="showcase__slider">
+								<ul class="rslides">
+
+									<li>
+										<a href="content/project_placeholder_slide.jpg" target="_blank">
+											<img src="content/project_placeholder_slide.jpg">
+										</a>
+									</li>
+
+								
+
+
+								</ul>
+							</div>
+							<div class="showcase__infos-wrapper">
+								<div class="showcase__title">CrazyRunner</div>
+								<div class="showcase__point">
+									
+									<div class="showcase__point-title">Responsabilidades</div>
+									<div class="showcase__point-description">
+										UX Design, Front-end and Back-End Development.
+									</div>
+									
+								</div>
+								<div class="showcase__point">
+									<div class="showcase__point-title">Lenguajes/Frameworks</div>
+									<div class="showcase__point-description">
+										HTML, CSS, JavaScript
+									</div>
+								</div>
+								<div class="showcase__point">
+									<div class="showcase__point-title">Detalles</div>
+									<div class="showcase__point-details-excerpt">
+										Es el primer video juego que programe y use como inspiracion el dinosaurio de google
+										
+									</div>
+									
+								</div>
+								<a target="_blank" href="https://labordetrabajo.github.io/CrazyRunner/" class="showcase__button  ghost-button  ghost-button--realizations">Ver Pagina</a>
+							</div>
+						</div>
+
+						<!-- project 3 -->
+						<div data-project="p3" class="showcase__stage">
+							<div class="showcase__slider">
+								<ul class="rslides">
+									<li><img src="./content/recoraluminio.png"></li>
+								</ul>
+							</div>
+							<div class="showcase__infos-wrapper">
+								<div class="showcase__title">Nuevo Aluminio</div>
+								<div class="showcase__point">
+									<div class="showcase__point-title">Responsabilidades</div>
+									<div class="showcase__point-description">
+										UX Design, Front-end and Back-End Development.
+									</div>
+								</div>
+								<div class="showcase__point">
+									<div class="showcase__point-title">Lenguajes/Frameworks</div>
+									<div class="showcase__point-description">
+										HTML, CSS, Apis, JavaScript, Bootstrap
+									</div>
+								</div>
+								<div class="showcase__point">
+									<div class="showcase__point-title">Detalles</div>
+									<div class="showcase__point-details-excerpt">
+										Primera pagina web echa a pedido por un cliente<span class="showcase__ellipsis">...</span>
+										<span class="showcase__readmore">mas</span>
+									</div>
+									<div class="showcase__point-details-full">
+										se me encargo hacer  una web de presentacion con los datos de contacto de la empresa
+										<span class="showcase__readless">menos</span>
+									</div>
+								</div>
+								<a target="_blank" href="https://labordetrabajo.github.io/NuevoAluminio/" class="showcase__button  ghost-button  ghost-button--realizations">Ver Pagina</a>
+							</div>
+						</div>
+						</div>
+
+						
+
+
+				</div>
+			</div>
+		</section>
+		<!-- End "Realizations" Section - With Projects -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- "Contact" Section -->
+		<section id="contact" class="contact">
+			<div class="contact__wrapper">
+				<div class="section-header">
+					<div class="section-header__title  section-header__title--contact">Contacto...</div>
+					<div class="section-header__subtitle">Puede comunicarse conmigo usando el siguiente formulario o email</div>
+				</div>
+
+				<div class="contact__icons-wrapper">
+					<div class="contact__icon">
+						<a target="_blank" href="mailto:dominikdsgnr@gmail.com"><i class="fa fa-envelope"></i></a>
+						<div class="contact__icon-description">lucaslaborde.trabajo@gmail.com</div>
+					</div>
+					<!-- 
+					<div class="contact__icon">
+						<a target="_blank" "><i class="fa fa-twitter"></i></a>
+						<div class="contact__icon-description">@SerafinDominik</div>
+					</div>
+					<div class="contact__icon">
+						<a target="_blank" href=><i class="fa fa-dribbble"></i></a>
+						<div class="contact__icon-description"</div>
+					</div>
+				</div>
+				-->
+
+				<div class="contact__spacer">&nbsp;</div>
+
+				<form id="contact-form" class="contact__form" action="./php/contact_form.php" method="POST">
+
+					<div class="contact__textarea-wrapper">
+						<label for="message_content" class="contact__label">Mensaje</label>
+						<div class="contact__response-ajax-text">&nbsp;</div>
+						<textarea id="message_content" rows="10" placeholder="Gracias por usar este formulario le respondere en brevedad!!" required></textarea>
+					</div>
+
+					<div class="contact__bottom-wrapper">
+						<div class="contact__sender-info-wrapper">
+							<div class="contact__input-wrapper  contact__input-wrapper--name">
+								<label for="sender_name" class="contact__label">Nombre</label>
+								<div class="contact__response-ajax-text">&nbsp;</div>
+								<input id="sender_name" type="text" placeholder="Cosme Fulanito" required>
+							</div>
+							<div class="contact__input-wrapper  contact__input-wrapper--email">
+								<label for="sender_email" class="contact__label">Email</label>
+								<div class="contact__response-ajax-text">&nbsp;</div>
+								<input id="sender_email" type="email" placeholder="CosmeFulanito@example.com" required>
+							</div>
+						</div>
+
+						<div class="contact__button-wrapper  ghost-button  ghost-button--contact">
+							<div class="contact__paper-plane-wrapper"><i class="fa fa-paper-plane"></i></div>
+							<div class="contact__response  contact__response--success">
+								<div id="colorenviar"  class="contact__response-title"><i class="fa fa-check"></i> Enviado.</div>
+								<div class="contact__response-description  contact__response-description--success">&nbsp;</div>
+							</div>
+							<div class="contact__response  contact__response--error">
+								<div class="contact__response-title"><i class="fa fa-warning"></i> Error.</div>
+								<div class="contact__response-description  contact__response-description--error">No se pudo Enviar.</div>
+							</div>
+							<input id="submit-button" type="submit" value="">
+						</div>
+					</div>
+				</form>
+
+			</div>
+		</section>
+		<!-- End "Contact" Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- Footer -->
+		<footer id="footer" class="footer">
+			<div class="footer__wrapper">
+				<div class="footer__copyright">Lucas Laborde &copy;2023</div>
+				
+			</div>
+		</footer>
+		<!-- End Footer -->
+
+
+
+
+
+
+
+
+	</div>
+	<!-- End Scrollable Content -->
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- Scripts postload -->
+	<script src="style/js/dependencies.min.js" type="text/javascript"></script>
+	<script src="style/js/global.js" type="text/javascript"></script>
+
+</body>
+</html>
